@@ -1,14 +1,15 @@
 /*jshint esversion: 6 */
 
-const dotenv = require('dotenv');
-dotenv.config();
+require('dotenv').config();
 
 var path = require('path');
 const express = require('express');
 const mockAPIResponse = require('./mockAPI.js');
-
+var bodyParser = require('body-parser');
+var cors = require('cors');
+// aylien API
 var AYLIENTextAPI = require('aylien_textapi');
-// set aylien API credentias
+// set credentias
 var textapi = new AYLIENTextAPI({
   application_id: process.env.APP_ID,
   application_key: process.env.API_KEY
@@ -16,8 +17,13 @@ var textapi = new AYLIENTextAPI({
 
 const app = express();
 app.use(express.static('dist'));
-
-console.log(__dirname);
+// bodyParser to use json
+app.use(bodyParser.json());
+// to use url encoded values
+app.use(bodyParser.urlencoded({
+  extended: true
+}));
+app.use(cors());
 
 
 
@@ -29,22 +35,22 @@ app.listen(8081, function () {
 });
 
 app.get('/', function (req, res) {
-    // res.sendFile('dist/index.html')
-    res.sendFile(path.resolve('src/client/views/index.html'));
+    res.sendFile('dist/index.html');
 });
 
 app.get('/test', function (req, res) {
     res.send(mockAPIResponse);
 });
 
+app.post('/api', apiCall);
 
-
-// AYLIEN API /////////////////////////////
-
-textapi.sentiment({
-  'text': 'John is a very good football player!'
-}, function(error, response) {
-  if (error === null) {
-    console.log(response);
-  }
-});
+function apiCall (req, res) {
+    textapi.sentiment({
+      'text': req.body.input
+    }, function(error, response) {
+      if (error === null) {
+        console.log(response);
+        res.send(response);
+      }
+    });
+}

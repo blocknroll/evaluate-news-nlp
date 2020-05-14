@@ -1,4 +1,4 @@
-/*jshint esversion: 6 */
+/*jshint esversion: 8 */
 
 import { checkForName } from './js/nameChecker';
 import { handleSubmit } from './js/formHandler';
@@ -9,10 +9,8 @@ import './styles/footer.scss';
 import './styles/form.scss';
 import './styles/header.scss';
 
-console.log(checkForName);
-
 alert("I EXIST");
-console.log("CHANGE!!");
+console.log("index.js - client: running");
 
 export {
   checkForName,
