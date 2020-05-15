@@ -24,14 +24,20 @@
         <main>
             <section>
                 <form class="" onsubmit="return Client.handleSubmit(event)">
-                    <input id="name" type="text" name="input" value="" onblur="onBlur()" placeholder="Name">
-                    <input type="submit" name="" value="submit" onclick="return Client.handleSubmit(event)" onsubmit="return handleSubmit(event)">
+                    <input id="user-input" type="text" name="input" value=""
+                           placeholder="...">
+                    <input type="submit" name="" value="analyze"
+                           onclick="return Client.handleSubmit(event)"
+                           onsubmit="return Client.handleSubmit(event)">
                 </form>
             <section>
 
             <section>
-                <strong>Form Results:</strong>
-                <div id="results"></div>
+                <strong>your results:</strong>
+                <div id="polarity"></div>
+                <div id="polarity-confidence"></div>
+                <div id="subjectivity"></div>
+                <div id="subjectivity-confidence"></div>
             </section>
         </main>
 
