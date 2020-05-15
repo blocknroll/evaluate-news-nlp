@@ -24,16 +24,19 @@
         <main>
             <section>
                 <form class="" onsubmit="return Client.handleSubmit(event)">
-                    <input id="user-input" type="text" name="input" value="" onblur="onBlur()" placeholder="...">
-                    <input type="submit" name="" value="analyze" onclick="return Client.handleSubmit(event)" onsubmit="return handleSubmit(event)">
+                    <input id="user-input" type="text" name="input" value=""
+                           placeholder="...">
+                    <input type="submit" name="" value="analyze"
+                           onclick="return Client.handleSubmit(event)"
+                           onsubmit="return Client.handleSubmit(event)">
                 </form>
             <section>
 
             <section>
                 <strong>your results:</strong>
                 <div id="polarity"></div>
-                <div id="subjectivity"></div>
                 <div id="polarity-confidence"></div>
+                <div id="subjectivity"></div>
                 <div id="subjectivity-confidence"></div>
             </section>
         </main>

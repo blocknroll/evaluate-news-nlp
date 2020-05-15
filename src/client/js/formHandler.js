@@ -4,7 +4,7 @@ function handleSubmit(event) {
     event.preventDefault();
 
     // check what text was put into the form field
-    let formText = document.getElementById('user-input').value;
+    let formText = document.querySelector('#user-input').value;
 
     console.log("Form Submitted with: " + formText);
 
@@ -18,7 +18,6 @@ function handleSubmit(event) {
         },
         body: JSON.stringify(data), //body datatype must match "Content-Type" header
       });
-
       try {
         const newData = await response.json();
         return newData;
@@ -30,10 +29,14 @@ function handleSubmit(event) {
 
     postData('/api', {input:formText})
     .then(function(res) {
-      document.getElementById('polarity').innerHTML = 'polarity: ' + res.polarity;
-      document.getElementById('subjectivity').innerHTML = 'subjectivity: ' + res.subjectivity;
-      document.getElementById('polarity-confidence').innerHTML = 'polarity-confidence: ' + res.polarity_confidence;
-      document.getElementById('subjectivity-confidence').innerHTML = 'subjectivity-confidence: ' + res.subjectivity_confidence;
+      document.querySelector('#polarity').innerHTML = 'polarity: ' +
+                                                       res.polarity;
+      document.querySelector('#subjectivity').innerHTML = 'subjectivity: ' +
+                                                           res.subjectivity;
+      document.querySelector('#polarity-confidence').innerHTML = 'polarity-confidence: ' +
+                                                                  res.polarity_confidence;
+      document.querySelector('#subjectivity-confidence').innerHTML = 'subjectivity-confidence: ' +
+                                                                       res.subjectivity_confidence;
     });
 }
 
