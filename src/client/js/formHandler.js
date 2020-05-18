@@ -27,7 +27,7 @@ function handleSubmit(event) {
       }
     };
 
-    postData('/api', {input:formText})
+    postData('/api', {input:formText} )
     .then(function(res) {
       document.querySelector('#polarity').innerHTML = 'polarity: ' +
                                                        res.polarity;

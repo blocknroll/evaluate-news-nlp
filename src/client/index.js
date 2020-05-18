@@ -1,6 +1,5 @@
 /*jshint esversion: 8 */
 
-import { checkForName } from './js/nameChecker';
 import { handleSubmit } from './js/formHandler';
 
 import './styles/resets.scss';
@@ -12,6 +11,5 @@ import './styles/header.scss';
 console.log("index.js - client: running");
 
 export {
-  checkForName,
   handleSubmit
 };

@@ -51,6 +51,7 @@ function apiCall (req, res) {
       if (error === null) {
         console.log(response);
         res.send(response);
+        return response;
       }
     });
 }
