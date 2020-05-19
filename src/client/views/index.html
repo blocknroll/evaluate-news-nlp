@@ -3,6 +3,7 @@
     <head>
         <meta charset="utf-8">
         <title>Test</title>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="/styles/resets.css">
         <link rel="stylesheet" href="/styles/base.css">
         <link rel="stylesheet" href="/styles/header.css">
@@ -14,10 +15,9 @@
 
         <header>
             <div class="">
-                Logo
-            </div>
-            <div class="">
-                navigation
+              <h1>
+                Let AI analyze your thoughts...
+              </h1>
             </div>
         </header>
 
@@ -25,15 +25,15 @@
             <section>
                 <form class="" onsubmit="return Client.handleSubmit(event)">
                     <input id="user-input" type="text" name="input" value=""
-                           placeholder="...">
-                    <input type="submit" name="" value="analyze"
+                           placeholder="write something here...">
+                    <input id="analyze-button" type="submit" name="" value="analyze"
                            onclick="return Client.handleSubmit(event)"
                            onsubmit="return Client.handleSubmit(event)">
                 </form>
-            <section>
+            </section>
 
-            <section>
-                <strong>your results:</strong>
+            <section class="results">
+                <div id="results">your results:</div>
                 <div id="polarity"></div>
                 <div id="polarity-confidence"></div>
                 <div id="subjectivity"></div>
@@ -42,7 +42,7 @@
         </main>
 
         <footer>
-            <p>This is a footer</p>
+            <p>Thank you & have a nice future!</p>
         </footer>
 
     </body>
