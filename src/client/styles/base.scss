@@ -18,11 +18,19 @@ $font-stack:    'Roboto', sans-serif;
 h1,
 h2,
 p,
-div,
-#analyze-button {
+div {
   font-family: $font-stack;
   font-size: 1.4em;
   font-weight: 100;
+}
+
+#analyze-button {
+  font-family: $font-stack;
+  font-size: 1.2em;
+  font-weight: 100;
+  padding: 4px;
+  margin: 10px auto;
+  width: 100%;
 }
 
 .results {
