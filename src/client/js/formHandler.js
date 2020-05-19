@@ -31,6 +31,8 @@ function handleSubmit(event) {
 
   postData('/api', {input:formText} )
   .then(function(res) {
+    document.querySelector('#results').innerHTML = "results:";
+
     document.querySelector('#polarity').innerHTML = 'polarity: ' +
                                                      res.polarity;
     document.querySelector('#subjectivity').innerHTML = 'subjectivity: ' +
