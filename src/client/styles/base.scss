@@ -9,6 +9,25 @@ main {
 }
 
 section {
-    margin: 50px auto;
-    max-width: 800px;
+    margin: 40px auto;
+    max-width: 400px;
+}
+
+$font-stack:    'Roboto', sans-serif;
+
+h1,
+h2,
+p,
+div,
+#analyze-button {
+  font-family: $font-stack;
+  font-size: 1.4em;
+  font-weight: 100;
+}
+
+.results {
+  div {
+    font-size: 1.2em;
+    margin: 0 auto 20px;
+  }
 }
