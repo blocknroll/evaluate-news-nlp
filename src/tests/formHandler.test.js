@@ -16,7 +16,6 @@ describe('user input: formText', () => {
 });
 
 
-// API CALL //////////////////////////////////////
 
 // async POST Function //////////////////////////
 const postData = async ( url = '', data = {})=>{

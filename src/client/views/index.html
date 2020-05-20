@@ -1,59 +1,59 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-    <head>
-        <meta charset="utf-8">
-        <title>Test</title>
-        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="/styles/resets.css">
-        <link rel="stylesheet" href="/styles/base.css">
-        <link rel="stylesheet" href="/styles/header.css">
-        <link rel="stylesheet" href="/styles/form.css">
-        <link rel="stylesheet" href="/styles/footer.css">
-    </head>
+  <head>
+      <meta charset="utf-8">
+      <title>Test</title>
+      <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/styles/resets.css">
+      <link rel="stylesheet" href="/styles/base.css">
+      <link rel="stylesheet" href="/styles/header.css">
+      <link rel="stylesheet" href="/styles/form.css">
+      <link rel="stylesheet" href="/styles/footer.css">
+  </head>
 
-    <body>
+  <body>
 
-        <header>
-            <div class="">
-              <h1>
-                Let AI analyze your thoughts...
-              </h1>
-            </div>
-        </header>
+    <header>
+      <div class="">
+        <h1>
+          Let AI analyze your thoughts...
+        </h1>
+      </div>
+    </header>
 
-        <main>
-            <section>
-                <form class="" onsubmit="return Client.handleSubmit(event)">
-                    <input id="user-input" type="text" name="input" value=""
-                           placeholder="write something here...">
-                    <button id="analyze-button" type="submit" name=""
-                            value="analyze"
-                            onsubmit="return Client.handleSubmit(event)">
-                            analyze</button>
-                </form>
-            </section>
+    <main>
+      <section>
+        <form class="" onsubmit="return Client.handleSubmit(event)">
+          <input id="user-input" type="text" name="input" value=""
+                 placeholder="write something here...">
+          <button id="analyze-button" type="submit" name=""
+                  value="analyze"
+                  onsubmit="return Client.handleSubmit(event)">
+                  analyze</button>
+        </form>
+      </section>
 
-            <section class="results">
-                <div id="results">your results:</div>
-                <div id="polarity"></div>
-                <div id="polarity-confidence"></div>
-                <div id="subjectivity"></div>
-                <div id="subjectivity-confidence"></div>
-            </section>
-        </main>
+      <section class="results">
+        <div id="results">your results:</div>
+        <div id="polarity"></div>
+        <div id="polarity-confidence"></div>
+        <div id="subjectivity"></div>
+        <div id="subjectivity-confidence"></div>
+      </section>
+    </main>
 
-        <footer>
-            <p>Thank you & have a nice future!</p>
-        </footer>
+    <footer>
+      <p>Thank you & have a nice future!</p>
+    </footer>
 
-        <script>
-            // Check that service workers are supported
-            if ('serviceWorker' in navigator) {
-                // Use the window load event to keep the page load performant
-                window.addEventListener('load', () => {
-                    navigator.serviceWorker.register('/service-worker.js');
-                });
-            }
-        </script>
-    </body>
+    <script>
+      // Check that service workers are supported
+      if ('serviceWorker' in navigator) {
+        // Use the window load event to keep the page load performant
+        window.addEventListener('load', () => {
+            navigator.serviceWorker.register('/service-worker.js');
+        });
+      }
+    </script>
+  </body>
 </html>
