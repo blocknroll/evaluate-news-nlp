@@ -30,6 +30,7 @@ It is also another chance to play with a variety of tools and techniques, some o
 ### Step 3: Build Production Server
 
 - `npm run build-prod`
+- `npm start`
 - view at localhost:8081
 
 
