@@ -1,4 +1,5 @@
 /*jshint esversion: 8 */
+
 import { handleSubmit } from './js/formHandler';
 import { checkForInput } from './js/checkForInput';
 

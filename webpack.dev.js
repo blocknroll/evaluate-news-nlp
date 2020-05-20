@@ -1,7 +1,8 @@
-const path = require('path')
-const webpack = require('webpack')
-const HtmlWebPackPlugin = require("html-webpack-plugin")
-const { CleanWebpackPlugin } = require('clean-webpack-plugin')
+/*jshint esversion: 6 */
+const path = require('path');
+const webpack = require('webpack');
+const HtmlWebPackPlugin = require("html-webpack-plugin");
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const regeneratorRuntime = require("regenerator-runtime");
 
 module.exports = {
@@ -41,4 +42,4 @@ module.exports = {
             protectWebpackAssets: false
         })
     ]
-}
+};
